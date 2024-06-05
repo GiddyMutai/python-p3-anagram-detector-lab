@@ -3,12 +3,12 @@ class Anagram:
         self.word = word
      
     def match(self, word_list):
-        result = []
+        anagrams = []
         characters = [letter for letter in self.word]
         for element in word_list:
             element_chars = [letter for letter in element]
             if sorted(element_chars) == sorted(characters):
-                result.append(element)
+                anagrams.append(element)
             else:
                 continue
-        return result
+        return anagrams
